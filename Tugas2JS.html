@@ -1,0 +1,51 @@
+<body style="background-color:rgb(172, 130, 211)">
+    <script>
+        let Pegawai = "Athaya Dzakiyya";
+        let Jabatan = "Manager";
+        let Status = "Single";
+        let GajiPokok = 0;
+
+
+        switch (Jabatan) {
+            case 'Manager':
+                GajiPokok = 10000000;
+                break;
+            case 'Asisten Manager':
+                GajiPokok = 8000000;
+                break;
+            case 'Staff':
+                GajiPokok = 5000000;
+                break;
+            default:
+                GajiPokok = 0;
+        }
+
+
+        let TunjanganJabatan = 0.1 * GajiPokok;
+        let BPJS = 0.1 * GajiPokok;
+
+        let TunjanganKeluarga = 0;
+
+        switch (Status) {
+            case 'Menikah':
+                TunjanganKeluarga = 0.1 * GajiPokok;
+                break;
+            default:
+                TunjanganKeluarga = 0;
+        }
+
+        let TotalPenghasilan = GajiPokok + TunjanganJabatan + BPJS + TunjanganKeluarga;
+
+        document.write(
+            "<center><b>DATA PEGAWAI</b>" + "<hr>" +
+            " Nama Pegawai = " + Pegawai +
+            "<br> Jabatan = " + Jabatan +
+            "<br> Status = " + Status +
+            "<br> Gaji Pokok = Rp.  " + GajiPokok +
+            "<br> Tunjangan Jabatan = Rp. " + TunjanganJabatan +
+            "<br> BPJS = Rp. " + BPJS +
+            "<br> Tunjangan Keluarga = Rp. " + TunjanganKeluarga +
+            "<br> Total Penghasilan = Rp." + TotalPenghasilan
+        )
+    </script>
+</body>
