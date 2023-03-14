@@ -1,0 +1,88 @@
+<script>
+    let a1 = {
+        nama: "Lisa",
+        nilai: 40
+    }
+    let a2 = {
+        nama: "Hana",
+        nilai: 70
+    }
+    let a3 = {
+        nama: "Daniel",
+        nilai: 50
+    }
+    let a4 = {
+        nama: "Xian han",
+        nilai: 85
+    }
+    let a5 = {
+        nama: "Keyra",
+        nilai: 100
+    }
+
+    let People = [a1, a2, a3, a4, a5];
+</script>
+<h3>
+    <table style="width: 100%; text-align: center; background-color: rgb(105, 214, 160); padding: 5 ">
+        <thead>
+            <tr>
+                <td>No.</td>
+                <td>Nama</td>
+                <td>Nilai</td>
+                <td>Grade</td>
+                <td>Predikat</td>
+                <td>Keterangan</td>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                var no = 1;
+                for (p of People) {
+                    let keterangan = (p.nilai >= 60) ? "Lulus" : "Gagal";
+
+                    let grade = "";
+                    if (p.nilai > 90 && p.nilai <= 100) grade = "A";
+                    else if (p.nilai > 80 && p.nilai <= 89) grade = "B";
+                    else if (p.nilai > 60 && p.nilai <= 79) grade = "C";
+                    else if (p.nilai > 45 && p.nilai <= 59) grade = "D";
+                    else grade = "E";
+
+                    switch (grade) {
+                        case "A":
+                            predikat = "Sangat Baik";
+                            break;
+                        case "B":
+                            predikat = "Baik";
+                            break;
+                        case "C":
+                            predikat = "Cukup";
+                            break;
+                        case "D":
+                            predikat = "Kurang";
+                            break;
+                        case "E":
+                            predikat = "Sangat Kurang";
+                            break;
+                        default:
+                            predikat = "";
+                            break;
+                    }
+
+                    var warna;
+                    for (p.no = 1; p.no <= 2; p.no++) {
+                        warna = (no % 2 == 0) ? 'yellow' : 'violet';
+                    }
+
+                    document.write(`<tr bgcolor = "${warna}">
+                        <td>${no++}</td>
+                        <td>${p.nama}</td>
+                        <td>${p.nilai}</td> 
+                        <td>${keterangan}</td>
+                        <td>${grade}</td>
+                        <td>${predikat}</td>
+                        </tr>`);
+                }
+            </script>
+        </tbody>
+    </table>
+</h3>
