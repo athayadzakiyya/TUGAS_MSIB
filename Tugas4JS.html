@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 JS</title>
+</head>
+
+<body bgcolor="pink">
+
+    <table border="3" align="center" cellpadding="10" width="25%">
+        <form id="kalkulator">
+            <thead>
+                <tr bgcolor="aquamarine">
+                    <th colspan="2">Calculator Sederhana</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <tr>
+                        <td> Angka 1 : </td>
+                        <td><input type="text" name="angka" placeholder="masukan angka pertama"></td>
+                    </tr>
+                    <tr>
+                        <td>Angka 2 : </td>
+                        <td><input type="text" name="angka2" placeholder="masukan angka kedua"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button type="button" name="btn_tambah" onclick="tambah()">+</button>&nbsp
+                            <button type="button" name="btn_tambah" onclick="kurang()">-</button>&nbsp
+                            <button type="button" name="btn_tambah" onclick="kali()">*</button>&nbsp
+                            <button type="button" name="btn_tambah" onclick="bagi()">/</button>&nbsp
+                            <button type="button" name="btn_tambah" onclick="pangkat()">x²</button></td>
+                    </tr>
+
+            </tbody>
+            <tfoot bgcolor="aquamarine">
+
+                <td> Hasil : </td>
+                <td><input type="text" name="hasil" value="" disabled> <br></td>
+
+            </tfoot>
+            <script src="calculator.js">
+            </script>
+        </form>
+    </table>
+
+</body>
+
+</html>
