@@ -1,0 +1,49 @@
+body{
+    background-image: url('luar.jfif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+H1{
+    color: antiquewhite;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+legend{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14pt;
+    color: rgb(211, 91, 91);
+}
+
+div#menu {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;  
+    padding: 10px;
+    color: rgb(211, 91, 91);
+    border: 10px;
+    margin: auto;
+}
+
+a.item:link, a.item:visited, a.item:active{
+    text-decoration: none;
+    font-size: 16pt;   
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 0, 38);
+    padding: 20px;
+    display: block;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(255, 110, 110);
+}
+
+a.item:hover{
+    text-decoration: none;
+    font-size: 14pt;
+    color: white;
+    border: 2px solid rgb(255, 47, 47);
+    padding: 15px;
+    background-color: rgb(205, 50, 109);
+}
