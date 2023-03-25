@@ -128,11 +128,13 @@
 
     if($agama == "islam" && $gajiKotor >= 6000000 ) $zakat = 0.025 * $gajiKotor;
     else $zakat = 0;
+
+    $Bersih = $gajiKotor - $zakat;
     
 
     if(isset($button)){
         ?>
-        <fieldset padding= 5px>
+        <fieldset>
         <legend>Hasil:</legend>
         Nama Karyawan : <?= $nama ?> 
         <br> Jabatan : <?= $jabatan ?>
@@ -142,6 +144,7 @@
         <br> Tunjangan Keluarga : <?= $TunjanganKeluarga ?>
         <br> Gaji Kotor : <?= $gajiKotor ?>
         <br> Jumlah Zakat Profesi : <?= $zakat ?>
+        <br> Take Home Pay : <?= $Bersih ?>
 
         </fieldset>
         <?php 
