@@ -7,7 +7,7 @@
     <title>Membuat Rumus Bangung datar Persegi</title>
 </head>
 <body>
-    <h1> Bangun Datar Persegi </h1>
+    <h1> Bangun Datar Persegi </h1> 
 
     <form method="POST">
         <table>
