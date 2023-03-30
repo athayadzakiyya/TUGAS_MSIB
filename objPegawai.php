@@ -1,5 +1,5 @@
 <?php 
-require 'h.php';
+require 'P.php';
 
 $pegawai1 = new Pegawai('01111','Andi','Manager','Islam','Menikah');
 $pegawai2 = new Pegawai('01111','Andi','Manager','kristen','Belum Menikah');
