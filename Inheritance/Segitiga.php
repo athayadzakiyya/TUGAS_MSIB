@@ -14,7 +14,7 @@ class Segitiga extends Bentuk2D {
     }
 
     public function namaBidang(){
-        echo "Segitiga";
+        echo "Segitiga Sama Sisi";
     }
 
     public function LuasBidang(){
@@ -23,7 +23,7 @@ class Segitiga extends Bentuk2D {
     }
 
     public function KelilingBidang(){
-        $keliling = 2 * ($this->alas + $this->sisi);
+        $keliling = 3 *  $this->sisi;
         return $keliling;
     }
 }

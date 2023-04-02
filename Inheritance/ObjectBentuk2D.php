@@ -9,7 +9,7 @@
 <body bgcolor="pink" align="center">
 
     <form method="post">
-    <table border="3" align="center" cellpadding="20" width="40%">
+    <table border="1" align="center" cellpadding="20" width="30%">
 
             <thead>
                 <tr bgcolor="white">
