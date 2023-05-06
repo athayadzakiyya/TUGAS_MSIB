@@ -1,12 +1,6 @@
 <?php
-// include_once 'top.php';
-// include_once 'menu.php';
-$model = new Produk();
-$data_produk = $model->dataProduk();
-
-// foreach ($data_produk as $row){
-//     print $row['kode'];
-// }
+$model = new Kartu();
+$kartu = $model->Kartu();
 ?>
 
 <h1 class="mt-4">Tables</h1>
@@ -33,11 +27,8 @@ $data_produk = $model->dataProduk();
                     <th>No</th>
                     <th>Kode</th>
                     <th>Nama</th>
-                    <th>Harga Beli</th>
-                    <th>Harga Jual</th>
-                    <th>Stok</th>
-                    <th>Mininal Stok</th>
-                    <th>Jenis Produk</th>
+                    <th>Diskon</th>
+                    <th>Iuran</th>
                 </tr>
             </thead>
             <tfoot>
@@ -45,27 +36,21 @@ $data_produk = $model->dataProduk();
                     <th>No</th>
                     <th>Kode</th>
                     <th>Nama</th>
-                    <th>Harga Beli</th>
-                    <th>Harga Jual</th>
-                    <th>Stok</th>
-                    <th>Mininal Stok</th>
-                    <th>Jenis Produk</th>
+                    <th>Diskon</th>
+                    <th>Iuran</th>
                 </tr>
             </tfoot>
             <tbody>
                 <?php
                 $no = 1;
-                foreach($data_produk as $row){
+                foreach($kartu as $row){
                 ?>
                 <tr>
                     <td><?= $no ?></td>
                     <td><?= $row['kode']?></td>
                     <td><?= $row['nama']?></td>
-                    <td><?= $row['harga_beli']?></td>
-                    <td><?= $row['harga_jual']?></td>
-                    <td><?= $row['stok']?></td>
-                    <td><?= $row['min_stok']?></td>
-                    <td><?= $row['jenis_produk_id']?></td>
+                    <td><?= $row['diskon']?></td>
+                    <td><?= $row['iuran']?></td>
                 </tr>
                 <?php
                 $no++;
