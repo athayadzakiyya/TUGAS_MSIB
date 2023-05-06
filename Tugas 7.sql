@@ -38,17 +38,16 @@ Query OK, 0 rows affected (0.006 sec)
 
 MariaDB [dbtoko1]> DELIMITER ;
 MariaDB [dbtoko1]> CALL showPelanggan();
-+----+--------+----------------+------+------------+------------+------------------+------------+----------+
-| id | kode   | nama_pelanggan | jk   | tmp_lahir  | tgl_lahir  | email            | alamat     | kartu_id |
-+----+--------+----------------+------+------------+------------+------------------+------------+----------+
-|  1 | 011101 | Asa            | P    | Bandung    | 1997-09-06 | asa@gmail.com    | Bandung    |        1 |
-|  2 | 011102 | Asahi          | L    | Yogyakarta | 1998-08-07 | asahi@gmail.com  | Yogyakarta |        2 |
-|  3 | 011103 | Uci            | P    | Kediri     | 2001-09-08 | uci@gmail.com    | Jakarta    |        3 |
-|  4 | 011104 | Yoshi          | L    | Jakarta    | 1997-09-08 | yoshi@gmail.com  | Kediri     |        1 |
-|  5 | 011105 | Haruto         | L    | Jakarta    | 2001-08-01 | haruto@gmail.com | Jakarta    |        2 |
-|  6 | 011106 | Kawai Ruka     | P    | Jakarta    | 2002-09-01 | ruka@gmail.com   | Surabaya   |        1 |
-|  7 | 011107 | Kazuha         | P    | Yogyakarta | 2003-09-09 | kazuha@gmail.com | Yogyakarta |        3 |
-+----+--------+----------------+------+------------+------------+------------------+------------+----------+
++----+--------+----------------+------+------------+------------+------------------------+------------+----------+
+| id | kode   | nama_pelanggan | jk   | tmp_lahir  | tgl_lahir  | email                  | alamat     | kartu_id |
++----+--------+----------------+------+------------+------------+------------------------+------------+----------+
+|  1 | 011101 | Agung          | L    | Bandung    | 1997-09-06 | agung@gmail.com        | Bandung    |        1 |
+|  2 | 011102 | Pandan Wangi   | P    | Yogyakarta | 1998-08-07 | pandanwangi@gmail.com  | Yogyakarta |        2 |
+|  3 | 011103 | Sekar          | P    | Kediri     | 2001-09-08 | sekar@gmail.com        | Jakarta    |        3 |
+|  4 | 011104 | Suandi         | L    | Jakarta    | 1997-09-08 | suandi@gmail.com       | Kediri     |        1 |
+|  5 | 011105 | Pradana        | L    | Jakarta    | 2001-08-01 | pradana@gmail.com      | Jakarta    |        2 |
+|  6 | 011106 | Gayatri        | P    | Jakarta    | 2002-09-01 | gayatri@gmail.com      | Surabaya   |        1 |
++----+--------+----------------+------+------------+------------+------------------------+------------+----------+
 7 rows in set (0.001 sec)
 
 -- cara 2 --
@@ -61,17 +60,16 @@ Query OK, 0 rows affected (0.005 sec)
 
 MariaDB [dbtoko1]> DELIMITER ;
 MariaDB [dbtoko1]> CALL showPelanggan1();
-+----+--------+----------------+------+------------+------------+------------------+------------+----------+
-| id | kode   | nama_pelanggan | jk   | tmp_lahir  | tgl_lahir  | email            | alamat     | kartu_id |
-+----+--------+----------------+------+------------+------------+------------------+------------+----------+
-|  1 | 011101 | Asa            | P    | Bandung    | 1997-09-06 | asa@gmail.com    | Bandung    |        1 |
-|  2 | 011102 | Asahi          | L    | Yogyakarta | 1998-08-07 | asahi@gmail.com  | Yogyakarta |        2 |
-|  3 | 011103 | Uci            | P    | Kediri     | 2001-09-08 | uci@gmail.com    | Jakarta    |        3 |
-|  4 | 011104 | Yoshi          | L    | Jakarta    | 1997-09-08 | yoshi@gmail.com  | Kediri     |        1 |
-|  5 | 011105 | Haruto         | L    | Jakarta    | 2001-08-01 | haruto@gmail.com | Jakarta    |        2 |
-|  6 | 011106 | Kawai Ruka     | P    | Jakarta    | 2002-09-01 | ruka@gmail.com   | Surabaya   |        1 |
-|  7 | 011107 | Kazuha         | P    | Yogyakarta | 2003-09-09 | kazuha@gmail.com | Yogyakarta |        3 |
-+----+--------+----------------+------+------------+------------+------------------+------------+----------+
++----+--------+----------------+------+------------+------------+------------------------+------------+----------+
+| id | kode   | nama_pelanggan | jk   | tmp_lahir  | tgl_lahir  | email                  | alamat     | kartu_id |
++----+--------+----------------+------+------------+------------+------------------------+------------+----------+
+|  1 | 011101 | Agung          | L    | Bandung    | 1997-09-06 | agung@gmail.com        | Bandung    |        1 |
+|  2 | 011102 | Pandan Wangi   | P    | Yogyakarta | 1998-08-07 | pandanwangi@gmail.com  | Yogyakarta |        2 |
+|  3 | 011103 | Sekar          | P    | Kediri     | 2001-09-08 | sekar@gmail.com        | Jakarta    |        3 |
+|  4 | 011104 | Suandi         | L    | Jakarta    | 1997-09-08 | suandi@gmail.com       | Kediri     |        1 |
+|  5 | 011105 | Pradana        | L    | Jakarta    | 2001-08-01 | pradana@gmail.com      | Jakarta    |        2 |
+|  6 | 011106 | Gayatri        | P    | Jakarta    | 2002-09-01 | gayatri@gmail.com      | Surabaya   |        1 |
++----+--------+----------------+------+------------+------------+------------------------+------------+----------+
 7 rows in set (0.001 sec)
 
 -- Buat fungsi inputProduk(), setelah itu panggil fungsinya --
@@ -117,14 +115,14 @@ MariaDB [dbtoko1]> CALL showProduk1;
 |  1 | TV01 | TV         |    3000000 |    4000000 |    3 |        2 |               1 |
 |  2 | TV02 | TV 21 Inc  |    2000000 |    3000000 |   10 |        3 |               1 |
 |  3 | K001 | Kulkas     |    4000000 |    5000000 |   10 |        3 |               1 |
-|  4 | M001 | Meja Makan |    1000000 |    2000000 |    4 |        2 |               4 |
+|  4 | M001 | Meja Makan |    1000000 |    2000000 |    4 |        3 |               4 |
 |  5 | T001 | Taro       |       4000 |       5000 |    3 |        2 |               2 |
-|  7 | S001 | Sofa       |    3000000 |    4000000 |    7 |        4 |               4 |
+|  6 | TK01 | Teh Kotak  |       3000 |       4000 |    2 |       10 |               3 |
 +----+------+------------+------------+------------+------+----------+-----------------+
 6 rows in set (0.001 sec)
 
 -- Buat fungsi totalPesanan(), setelah itu panggil fungsinya --
-MariaDB [dbtoko1]> SELECT * FROM pesanan;
+MariaDB [dbtoko1]> SELECT * FROM pesanan2;
 +----+------------+--------+--------------+
 | id | tanggal    | total  | pelanggan_id |
 +----+------------+--------+--------------+
@@ -138,7 +136,7 @@ MariaDB [dbtoko1]> DELIMITER $$
 MariaDB [dbtoko1]> CREATE PROCEDURE totalPesanan()
     -> BEGIN
     -> DECLARE total_pesanan double;
-    -> SELECT SUM(total) INTO total_pesanan FROM pesanan;
+    -> SELECT SUM(total) INTO total_pesanan FROM pesanan2;
     -> SELECT total_pesanan;
     -> END $$
 Query OK, 0 rows affected (0.004 sec)
@@ -156,7 +154,7 @@ MariaDB [dbtoko1]> CALL totalPesanan();
 MariaDB [dbtoko1]> DELIMITER $$
 MariaDB [dbtoko1]> CREATE PROCEDURE totalPesanan1()
     -> BEGIN
-    -> SELECT SUM(total) FROM pesanan;
+    -> SELECT SUM(total) FROM pesanan2;
     -> END $$
 Query OK, 0 rows affected (0.004 sec)
 
@@ -172,7 +170,7 @@ MariaDB [dbtoko1]> CALL totalPesanan1();
 -- Tampilkan seluruh pesanan dari semua pelanggan --
 MariaDB [dbtoko1]> CREATE PROCEDURE showSeluruhPesanan()
     -> BEGIN
-    -> SELECT pesanan.id, pelanggan.nama_pelanggan,pelanggan.alamat, pesanan.tanggal AS tgl_pesanan, pesanan.total AS total_harga_pesanan FROM pesanan
+    -> SELECT pesanan.id, pelanggan.nama_pelanggan,pelanggan.alamat, pesanan.tanggal AS tgl_pesanan, pesanan.total AS total_harga_pesanan FROM pesanan2
     -> INNER JOIN pelanggan ON pesanan.pelanggan_id = pelanggan.id;
     -> END $$
 Query OK, 0 rows affected (0.004 sec)
@@ -182,15 +180,15 @@ MariaDB [dbtoko1]> CALL showSeluruhPesanan;
 +----+----------------+---------+-------------+---------------------+
 | id | nama_pelanggan | alamat  | tgl_pesanan | total_harga_pesanan |
 +----+----------------+---------+-------------+---------------------+
-|  1 | Asa            | Bandung | 2023-03-03  |              200000 |
-|  2 | Asa            | Bandung | 2022-02-02  |               30000 |
+|  1 | Agung          | Bandung | 2023-03-03  |              200000 |
+|  2 | Agung          | Bandung | 2022-02-02  |               30000 |
 +----+----------------+---------+-------------+---------------------+
 2 rows in set (0.002 sec)
 
 -- Buatkan query panjang di atas menjadi sebuah view baru: pesanan_produk_vw (menggunakan join dari table pesanan,pelanggan dan produk) --
 MariaDB [dbtoko1]> CREATE VIEW pesanan_produk_vw AS
     -> SELECT pesanan.id, pesanan.tanggal, pesanan.total, pelanggan.kode AS kode_pelanggan, pelanggan.nama_pelanggan, pelanggan.jk, pelanggan.alamat, produk.kode AS kode_produk, produk.nama AS nama_produk, produk.harga_jual, pesanan_items.harga
-    -> FROM pesanan
+    -> FROM pesanan2
     -> INNER JOIN pelanggan ON pesanan.pelanggan_id = pelanggan.id
     -> INNER JOIN pesanan_items ON pesanan.id = pesanan_items.pesanan_id
     -> INNER JOIN produk ON pesanan_items.produk_id = produk.id;
