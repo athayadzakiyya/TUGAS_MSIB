@@ -8,13 +8,27 @@ class Pesanan{
     }
     public function Pesanan()
     {
-        $sql = "SELECT s.tanggal, s.total, p.nama_pelanggan FROM pesanan s
-        LEFT JOIN pelanggan p ON p.id = s.pelanggan_id";
+        $sql = "SELECT * FROM pesanan2";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute();
         $rs = $ps->fetchAll();
         return $rs;
     }
+    public function getPesanan($id){
+        $sql = "SELECT * FROM pesanan2 =?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
+        $rs = $ps->fetch();
+        return $rs;
+    }
+    public function simpan($data){
+    $sql = "INSERT INTO pesanan2(tanggal, total, pelanggan_id)
+    VALUES (?,?,?)";
+    $ps = $this->koneksi->prepare($sql);
+    $ps->execute($data);
+    }
+    public function ubah(){
+        
+    }
 }
-
 ?>
