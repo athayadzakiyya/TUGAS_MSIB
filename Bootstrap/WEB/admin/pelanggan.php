@@ -28,12 +28,12 @@ $pelanggan = $model->Pelanggan();
                     <th>No</th>
                     <th>Kode</th>
                     <th>Nama</th>
-                    <th>Jenis Kelamin</th>
+                    <th>JK</th>
                     <th>Tempat Lahir</th>
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Nama Kartu</th>
+                    <th>Kartu ID</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -42,12 +42,12 @@ $pelanggan = $model->Pelanggan();
                     <th>No</th>
                     <th>Kode</th>
                     <th>Nama</th>
-                    <th>Jenis Kelamin</th>
+                    <th>JK</th>
                     <th>Tempat Lahir</th>
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Nama Kartu</th>
+                    <th>Kartu ID</th>
                     <th>Action</th>
                 </tr>
             </tfoot>
@@ -69,8 +69,9 @@ $pelanggan = $model->Pelanggan();
                     <td>
                     <form action="pelanggan_controller.php" method="POST">
                     <a class="btn btn-info btn-sm" href="index.php?url=pelanggan_detail&id=<?= $row ['id'] ?>">Detail</a>
-                    <!-- <a class="btn btn-warning btn-sm">Ubah</a>
-                    <a class="btn btn-danger btn-sm">Hapus</a> -->
+                    <a class="btn btn-warning btn-sm" href="index.php?url=pelanggan_form&idedit=<?= $row ['id']?>">Ubah</a>
+                    <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" 
+                    onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
 
                     <input type="hidden" name="idx" value="<?= $row['id']?>">
                       </form>
